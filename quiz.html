@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Quiz</title>
+        <script src="quiz.js"></script>
+        <style>
+          /*  body {
+                text-align: center;
+                background-color: cornsilk;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                
+            }
+            
+            #quiz{
+              margin-left: auto;
+              margin-right: auto;
+              max-width:900px;
+              background-color:  rgb(11, 169, 184);
+              border-radius: 5px; 
+            }
+            */
+        </style>
+    </head>
+    <body>
+      <div id="innerbg">
+      <header>
+        <nav>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="photoapp.html">Photoapp</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="quiz.html" id="active">Quiz</a></li>
+          </ul>
+  
+         </nav>
+      </header>
+      <div id="quiz">
+        <h1>Quiz</h1>
+        <p>This quiz will test your gecko knowledge.</p>
+        <h2>The quiz</h2>
+        
+          <form name="Quiz">
+            <label for="name">Enter your name</label>
+            <input id="name" type="text" name="name">
+
+            <p>What colour is your gecko?</p>
+            <input  id="Blue" type="radio" name="colour" value="Blue">
+                <label for="Blue">Blue</label>
+                <input id="Brown" type="radio" name="colour" value="Brown">
+                <label for="Brown">Brown</label>
+                <input id="Rainbow" type="radio" name="colour" value="Rainbow">
+                <label for="Rainbow">Rainbow</label>
+
+                <p>Which country does your gecko originate?<p>
+            <input id="country" type="radio" name="country" value="Morocco">
+            <label for="Morocco">Morocco</label>
+            <input id="country" type="radio" name="country" value="Greece">
+            <label for="Greece">Greece</label>
+            <input id="country" type="radio" name="country" value="Italy">
+            <label for="Italy">Italy</label>
+
+          </form>
+      </div>
+      <button type="button" onclick="checkAnswers()">Submit</button>
+      <br>
+    </div>
+    </body>
+</html>
+
+<script src="quiz.js">
+
+    console.log("Hello world...");
+</script>

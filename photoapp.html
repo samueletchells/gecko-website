@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Gecko Fact App</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Gecko photo app">
+        <meta author="Sam Etchells">
+        <meta keywords="gecko, reptile, frog">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="innerbg">
+
+      <header> 
+       <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="photoapp.html" id="active">Photoapp</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+
+       </nav>
+    
+        <h1 class="Header">Gecko's r cool</h1>
+        <h2> Welcome to my Gecko photo app</h2>
+      
+      </header>
+      <main>
+       <section>
+
+        <h3>Facts about Gecko's:</h3>
+
+        <p class="bold">Here are some interesting things about Gecko's</p> 
+        
+          <ul id="list-ul">
+            <li>They're the most species rich lizard</li>
+            <li>They come in cool colours</li>
+            <li>They have specialised toe pads</li>
+          </ul>
+        
+
+
+        <h3>Here are my top 3 geckos</h3>
+          <ol id="list-ol">
+            <li>Tokay Gecko</li>
+            <li>Satanic Leaf-Tailed Gecko</li>
+            <li>Crested Gecko</li>
+          </ol>
+        </section>
+
+        <div id="centred-gecko"> <img src="gecko.JPG" width="600px" alt="Blue & Orange - Tokay Gecko"> </div>
+
+        <p> For more information, click <a href="https://en.wikipedia.org/wiki/Gecko">here</a></p>
+        
+        <h2> Submit Gecko Photos Here</h2>
+       <section>
+        <form name="app">
+            <fieldset>
+                <legend>What colour is your gecko?</legend>
+                <input id="Blue" type="radio" name="colour" value="Blue">
+                <label for="Blue">Blue</label>
+                <input id="Brown" type="radio" name="colour" value="Brown">
+                <label for="Brown">Brown</label>
+                <input id="Rainbow" type="radio" name="colour" value="Rainbow">
+                <label for="Rainbow">Rainbow</label>
+            </fieldset>
+        </form>
+       </section>
+        <br>
+         <fieldset>
+            <legend>Which country does your gecko originate?</legend>
+            <input id="country" type="checkbox" name="country" value="Morocco">
+            <label for="Morocco">Morocco</label>
+            <input id="country" type="checkbox" name="country" value="Greece">
+            <label for="Greece">Greece</label>
+            <input id="country" type="checkbox" name="country" value="Italy">
+            <label for="Italy">Italy</label>
+         </fieldset>
+
+            <label for="url">Enter your photo URL</label>
+            <input id="url" type="text" name="photourl">
+            <input type="button" value="Submit" onclick="saveFile()">
+
+        
+        </main>
+      </div>
+    </body>
+</html>
+
+<script src="photoapp.js">
+ let saveFile = () => {
+
+//This is setting the checkboxes as an array
+var form = document.getElementById('app');
+var myArray = [];
+    form.querySelectorAll('input').forEach(function (input) {
+        if(input.type === 'checkbox'  && input.checked) {
+            myArray.push(input.value)
+        }
+    })
+
+form = document.forms.app.elements;
+const gender = form.gender.value;
+const personality = myArray;
+const link = form.photourl.value;
+
+// This variable stores all the data.
+let data = 
+    '\r Gender?: ' + gender + ' \r\n ' + 
+    'Personality: ' + personality + ' \r\n ' + 
+    'Link: ' + link 
+
+// Convert the text to BLOB.
+const textToBLOB = new Blob([data], { type: 'text/plain' });
+const sFileName = "filename";	   // The file to save the data.
+
+let newLink = document.createElement("a");
+newLink.download = sFileName;
+newLink.innerHTML = "Download File:";
+
+if (window.webkitURL != null) {
+    newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+}
+else {
+    newLink.href = window.URL.createObjectURL(textToBLOB);
+    newLink.style.display = "none";
+    document.body.appendChild(newLink);
+}
+
+newLink.click(); 
+}
+</script>
