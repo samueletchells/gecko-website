@@ -1,13 +1,14 @@
 body {
     background-color: rgb(101, 231, 248);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:orange;
+    color:darkorange;
    
   }
 
   h1,h2,h3,p {
     text-align: center;
   }
+  
 
 .bold {
   font-weight: bold;
@@ -17,8 +18,9 @@ body {
 text-align: center;
 }
 
-input, form {
+input, form, legend, fieldset {
   text-align: center;
+  
 }
 
 button {
@@ -28,15 +30,15 @@ button {
 #innerbg {
   margin-left: auto;
   margin-right: auto;
-  max-width:900px;
+  max-width:800px;
   background-color:  rgb(11, 169, 184);
    border-radius: 5px; 
  padding-bottom: 50px;
 }
 
-#centred-gecko {
+.centred-gecko {
   text-align: center;
-  border-radius: 15px;
+  
 
 }
 #list-ol {
@@ -49,7 +51,7 @@ button {
   max-width: 250px;
   margin-left: auto;
   margin-right: auto;
-}
+} 
 
 .Header {
 font-size: 30pt;
@@ -79,15 +81,18 @@ img {
   background-color: white;
 }
 nav ul {
-  background-color:whitesmoke;
+  background-color: palegoldenrod;
   overflow:hidden;
   list-style-type:none;
+  border-radius: 5px;
+  
+  
 }
 
 nav a {
   float: left;
   display:block;
-  color: orange;
+  color: darkorange;
   text-align: center;
   padding: 5px;
   text-decoration: none;
@@ -100,6 +105,24 @@ background-color:brown;
 #active {
   background-color:brown;
 }
+
+.multi {
+  background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
+}
+ /* centre's summary */
+details {
+  padding-left: 45%;
+}
+
+
+.centre-details {
+  padding-right: 80%;
+}
+
+.italics {
+  font-style: italic;
+}
+
 
 
 

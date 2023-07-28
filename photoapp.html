@@ -2,7 +2,7 @@
 <html lang="en-gb">
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Gecko Fact App</title>
+        <title>Photoapp</title>
         <meta charset="UTF-8">
         <meta name="description" content="Gecko photo app">
         <meta author="Sam Etchells">
@@ -13,7 +13,7 @@
         <div id="innerbg">
 
       <header> 
-       <nav>
+        <nav class="bold">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="photoapp.html" id="active">Photoapp</a></li>
@@ -23,16 +23,18 @@
 
        </nav>
     
-        <h1 class="Header">Gecko's r cool</h1>
-        <h2> Welcome to my Gecko photo app</h2>
-      
+        <h1>Gecko geekin'</h1>
+        <!--- <h2> Welcome to my photo app</h2> -->
+        <div class="centred-gecko"> <img src="gecko.JPG" width="500px" alt="Blue & Orange - Tokay Gecko"> </div>
+        <details>
+          <summary class="italics">More info</summary>
+        <p class="centre-details">Tokay Gecko</p>
+        </details>
       </header>
       <main>
        <section>
 
-        <h3>Facts about Gecko's:</h3>
-
-        <p class="bold">Here are some interesting things about Gecko's</p> 
+        <h3>Cool facts about Gecko's</h3>
         
           <ul id="list-ul">
             <li>They're the most species rich lizard</li>
@@ -42,7 +44,7 @@
         
 
 
-        <h3>Here are my top 3 geckos</h3>
+        <h3>Here are my top three</h3>
           <ol id="list-ol">
             <li>Tokay Gecko</li>
             <li>Satanic Leaf-Tailed Gecko</li>
@@ -50,11 +52,10 @@
           </ol>
         </section>
 
-        <div id="centred-gecko"> <img src="gecko.JPG" width="600px" alt="Blue & Orange - Tokay Gecko"> </div>
+  
 
-        <p> For more information, click <a href="https://en.wikipedia.org/wiki/Gecko">here</a></p>
+        <p> For more information, click <a href="https://en.wikipedia.org/wiki/Gecko"><i>here</i></a></p>
         
-        <h2> Submit Gecko Photos Here</h2>
        <section>
         <form name="app">
             <fieldset>
@@ -78,7 +79,7 @@
             <input id="country" type="checkbox" name="country" value="Italy">
             <label for="Italy">Italy</label>
          </fieldset>
-
+         <h2> Submit Gecko Photos Here</h2>
             <label for="url">Enter your photo URL</label>
             <input id="url" type="text" name="photourl">
             <input type="button" value="Submit" onclick="saveFile()">
@@ -87,6 +88,9 @@
         </main>
       </div>
     </body>
+    <footer>
+      <p class="bold">© Sam Etchells 2023 </p>
+      </footer>
 </html>
 
 <script src="photoapp.js">
